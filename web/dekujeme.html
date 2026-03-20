@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Děkujeme | Penzion Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="miniature.PNG">
+</head>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"siteId":1234567,"cookiePolicyId":12345678,"storage":{"useSiteId":true}};
+_iub.csLangConfiguration = {"cs":{"cookiePolicyId":12345678}};
+</script>
+<script type="text/javascript" src="https://cs.iubenda.com/autoblocking/1234567.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+<body>
+
+     <header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="index.php">
+                <img src="logo.PNG" alt="Penzion Oasis Logo" class="desktop-logo">
+                <img src="miniature.PNG" alt="Mini Logo" class="mobile-logo">
+            </a>
+        </div>
+        
+        <nav id="nav-wrapper">
+            <ul class="nav-menu">
+                <li><a href="index.php">Úvod</a></li>
+                <li><a href="onas.html">O nás</a></li>
+                <li><a href="pokoje.php">Pokoje a Ceny</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+    <main class="content-section" style=" min-height: 80vh; display:flex; align-items:center;">
+        <div class="container">
+            <div class="thank-you-box">
+                <div class="check-icon">✓</div>
+                <h1 style="color: #3A5A40; margin-bottom: 15px;">Děkujeme za rezervaci!</h1>
+                <p>Vaše rezervace byla úspěšně přijata. Potvrzovací e-mail jsme odeslali na vaši adresu.</p>
+                <div class="order-number-display">
+                    Číslo objednávky: <strong id="display-order-number">...</strong>
+                </div>
+                <div class="order-info">
+                    <p><strong>Co se bude dít dál?</strong></p>
+                    <p>Pokud jste zvolili platbu převodem, v e-mailu naleznete platební údaje a rezervaci potvrdíme po jejím uhrazení. V případě platby na místě vám finální potvrzení zašleme během několika dní.</p>
+                </div>
+
+                <a href="index.php" class="btn btn-primary">Zpět na úvodní stránku</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderNum = urlParams.get('order'); 
+            
+            if (orderNum) {
+                document.getElementById('display-order-number').textContent = orderNum;
+            } else {
+                document.querySelector('.order-number-display').style.display = 'none';
+            }
+                const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+    }
+        });
+
+    </script>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h4>Penzion Oasis</h4>
+                <p>Klidný odpočinek v srdci přírody.</p>
+                <p>Adresa: Ulice 123, 123 45 Město</p>
+                <br>
+                <a href="#" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a>
+                <a href="#" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">Cookie Policy</a>
+            </div>
+            <div class="footer-column">
+                <h4>Rychlé odkazy</h4>
+                <ul>
+                    <li><a href="o-nas.html">O nás</a></li>
+                    <li><a href="pokoje.php">Pokoje a Ceny</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+
+                   
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Kontaktujte nás</h4>
+                <p>Email: info@vasedomena.cz</p>
+                <p>Telefon: +420 123 456 789</p>
+                <p>Provozní doba: Po-Ne 8:00 - 20:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Penzion Oasis. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

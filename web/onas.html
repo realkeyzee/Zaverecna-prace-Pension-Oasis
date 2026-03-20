@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penzion Oasis | Klidný odpočinek v přírodě</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="miniature.PNG">
+</head>
+
+<body>
+
+     <header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="index.php">
+                <img src="logo.PNG" alt="Penzion Oasis Logo" class="desktop-logo">
+                <img src="miniature.PNG" alt="Mini Logo" class="mobile-logo">
+            </a>
+        </div>
+        
+        <nav id="nav-wrapper">
+            <ul class="nav-menu">
+                <li><a href="index.php">Úvod</a></li>
+                <li><a href="onas.html">O nás</a></li>
+                <li><a href="pokoje.php">Pokoje a Ceny</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+    <section id="proc-nas-vybrat" class="content-section" style="background-color: #f0f0e8;">
+        <div class="container">
+            <h2>O nás</h2>
+            <div class="icon-text-grid">
+                <div class="icon-text-block">
+                    <h3>Kdo jsme a co nabízíme</h3>
+                    <p>Jsme rodinný penzion s apartmány, který najdete v klidné části města. Naším cílem je vytvářet místo, kde se moderní ubytování potkává s osobním přístupem. Chceme, aby se u nás každý host cítil uvolněně, ať už k nám přijíždí za dobrodružstvím v přírodě, nebo za prací v okolních městech.</p>
+                </div>
+                <div class="icon-text-block">
+                    <h3>Na co si dáváme pozor</h3>
+                    <p>Vaše pohodlí a bezpečnost jsou pro nás prioritou. Dbáme na důkladnou čistotu a pravidelnou údržbu všech prostor. Používáme ekologické čisticí prostředky a dodržujeme nejpřísnější hygienické standardy. Máme nepřetržitou službu pro případné problémy.</p>
+                </div>
+                <div class="icon-text-block">
+                    <h3>Naše zázemí a komfort</h3>
+                    <p>Snažíme se, aby naše apartmány byly víc než jen místo na přespání. Nabízíme prostorné a plně vybavené zázemí, kde můžete v klidu relaxovat po dni stráveném venku. Ať už si chcete sami uvařit nebo jen v klidu posedět, naše prostory jsou navrženy tak, aby vám poskytly soukromí a veškeré pohodlí, které na cestách potřebujete.</p>
+                </div>
+                <div class="icon-text-block">
+                    <h3>Neustále se zlepšujeme</h3>
+                    <p>Náš penzion vnímáme jako živý projekt, který se neustále vyvíjí spolu s námi. Pečlivě nasloucháme zpětné vazbě našich hostů a postupně vylepšujeme každý kout, aby u nás bylo stále co objevovat. Baví nás sledovat, jak se okolí mění k lepšímu, a jsme hrdí, že k této proměně můžeme přispět kvalitním zázemím.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <h4>Penzion Oasis</h4>
+                <p>Klidný odpočinek v srdci přírody.</p>
+                <p>Adresa: Ulice 123, 123 45 Město</p>
+                <br>
+                <a href="#" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a>
+                <a href="#" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">Cookie Policy</a>
+            </div>
+            <div class="footer-column">
+                <h4>Rychlé odkazy</h4>
+                <ul>
+                    <li><a href="o-nas.html">O nás</a></li>
+                    <li><a href="pokoje.php">Pokoje a Ceny</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+
+                   
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Kontaktujte nás</h4>
+                <p>Email: info@vasedomena.cz</p>
+                <p>Telefon: +420 123 456 789</p>
+                <p>Provozní doba: Po-Ne 8:00 - 20:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Penzion Oasis. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+    }
+});
+
+
+
+    </script>
+</body>
+</html>
